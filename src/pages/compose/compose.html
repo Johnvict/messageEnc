@@ -1,0 +1,46 @@
+<ion-content no-border>
+  <ion-item>
+    <ion-label floating color="danger">
+      <ion-icon name="ios-person" item-start> Encryption Key</ion-icon>
+    </ion-label>
+    <hr />
+    <ion-input
+      type="password"
+      required
+      [(ngModel)]="messageDetail.key"
+      name="key"
+    ></ion-input>
+  </ion-item>
+  
+  <textarea
+    spellcheck="true"
+    autocomplete="true"
+    autocorrect="true"
+    rows="10"
+    required
+    [(ngModel)]="messageDetail.message"
+    placeholder="type your message here"
+  >
+  </textarea>
+
+</ion-content>
+
+<!-- <ion-footer>
+  <div id="footer">
+    <div class="elem">
+    </div>
+    <div class="elem">
+      <button ion-button icon-only (click)="send()">
+        <ion-icon name="md-send" color="danger"></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-footer> -->
+
+<ion-footer id="footer">
+    <ion-row>
+      <button ion-button full color="danger"  (click)="send()">
+        <ion-icon name="md-send" color="light"></ion-icon>
+      </button>
+    </ion-row>
+  </ion-footer>

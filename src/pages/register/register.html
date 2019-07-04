@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar  color="danger">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-center>Register User</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Your Email</ion-label>
+    <ion-input type="email" [(ngModel)]="userDetail.email"> </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Create Password</ion-label>
+    <ion-input type="text" [(ngModel)]="userDetail.password"> </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Create Pin</ion-label>
+    <ion-input type="number" [(ngModel)]="userDetail.pin"> </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>What is your secret Single Word?</ion-label>
+    <ion-input type="text" [(ngModel)]="userDetail.securityQuestion"> </ion-input>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer id="footer">
+    <ion-row>
+      <button ion-button full (click)="createUserAccount()"  color="danger"> Register Account</button>
+    </ion-row>
+  </ion-footer>

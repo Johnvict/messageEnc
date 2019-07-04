@@ -1,0 +1,47 @@
+page-compose {
+
+    .elem button{
+        border-radius: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .elem  {
+        position: relative;
+        min-width: 50px;
+    }
+
+    // .button-ios, .button {
+    //     // background: #fff;
+    //     color: white;
+    // }
+    // .button-ios.activated, button-md.activated {
+    //     background:  white;
+    //     color: red;
+    //     outline: red;
+    // }
+    div#footer div.elem:first-child {
+        flex-grow: 1;
+    }
+
+    div#footer {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    } 
+
+    textarea {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 130%;
+        width: 100%;
+        resize: none;
+        border: none;
+        padding-top: 10px; 
+        height: 100%
+    }
+
+}

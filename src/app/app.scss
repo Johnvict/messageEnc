@@ -1,0 +1,127 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+    font-family: Courgette;
+    src: url('../assets/fonts/Courgette.woff2');
+}
+
+.appName{
+    font-family: Courgette;
+    color: red;
+    // text-shadow: 2px 2px black;
+    margin-top: 0px;
+    padding-top: 0px
+  } 
+
+  div#footer div.elem:first-child {
+    flex-grow: 1;
+}
+
+div#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+} 
+
+.button-ios,  .button-md {
+    margin: 0; 
+    padding: 0; 
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    text-transform: initial;
+}
+
+.action-sheet-wrapper{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.action-sheet-group{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+.action-sheet-group-cancel {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.alert-md .alert-button-group {
+      // justify-content: flex-end;
+    // padding: 8px 8px 8px 24px;
+    justify-content: center;
+}
+
+// .button-md-danger {
+//     color: #fff;
+//     background-color: #f53d3d;
+// }
+
+// .button-round-md {
+//     border-radius: 64px;
+//     padding: 0 2.6rem;
+// }
+
+// .button-full-md {
+//     margin-left: 0;
+//     margin-right: 0;
+//     border-radius: 0;
+//     border-right-width: 0;
+//     border-left-width: 0;
+// }
+
+.alert-md .alert-button .button-inner {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: center;
+    text-transform: initial;
+}
+
+.alert-md .alert-button {
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    color: #fff;
+    background-color: #f53d3d;
+    margin: 0 8px 0 0;
+    padding: 10px;
+    border-radius: 64px;
+    width: 100px;
+}
+.action-sheet-md .action-sheet-title {
+    text-align: center;
+}
+
+
+.toast-md .toast-wrapper {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: fit-content;
+    max-width: 700px;
+    background: #353030e6;
+    border-radius: 64px;
+    align-content: center;
+    text-align: center;
+}

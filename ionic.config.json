@@ -1,0 +1,7 @@
+{
+  "name": "AesApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

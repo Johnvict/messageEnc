@@ -1,0 +1,27 @@
+<style>
+    .sideMenu{
+      background: url('assets/imgs/sideMenu.jpg') center / cover;
+      -webkit-box-shadow: 0px 4px 10px -4px rgba(250, 11, 11, 0.75);
+      -moz-box-shadow: 0px 4px 10px -4px rgba(252, 0, 0, 0.75);
+  }
+    .toolbar-title-md {
+      color: #f70d0d;
+  }
+</style>
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title text-center class="appName">Message Encryptor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <p>This app helps you to encrypt your outgoing messages. Encrypted messages are decrypted as well</p>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

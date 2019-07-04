@@ -1,0 +1,30 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>message</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <div *ngFor="let message of messages">
+    <h4>{{message.date}}</h4>
+    <ion-card *ngFor="let item of message.info">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/user-icon.png">
+          </ion-avatar>
+          <h2>{{messages.address}}</h2>
+        </ion-item>
+      
+        <ion-card-content>
+          <p>{{item.body}}</p>
+          <p>{{item.date | date: 'H:mm'}}</p>
+          <ion-buttons>
+            <button color="danger" outline small ion-button secondary  full (click)="decryptMessage(item.body)">Decrypt Message</button>
+          </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

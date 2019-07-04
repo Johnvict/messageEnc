@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar  color="danger">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-center>User Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <ion-item  *ngIf="!usePin">
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="userDetail.password"> </ion-input>
+  </ion-item>
+  
+  <ion-item *ngIf="usePin">
+    <ion-label stacked>Pin</ion-label>
+    <ion-input type="number" [(ngModel)]="userDetail.pin"> </ion-input>
+  </ion-item>
+  
+
+  
+  
+  
+  <button small  full  round ion-button outline (click)="showOptions()" color="danger">
+      Other Options
+    </button>
+
+</ion-content>
+
+<ion-footer id="footer">
+  <ion-row>
+    <button ion-button full (click)="loginUser()" color="danger"> Login</button>    
+  </ion-row>
+</ion-footer>

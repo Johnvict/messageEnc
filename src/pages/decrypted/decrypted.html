@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Decrypted Text</ion-title>
+    <ion-buttons end><button ion-button (click)="closeModal()">Close</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>  
+    <ion-card-content>
+      <p>{{  message }}</p>
+    </ion-card-content>
+</ion-card>
+<br><br>
+<ion-buttons>
+  <button small ion-button color="danger" outline  full (click)="closeModal()">Back </button>
+</ion-buttons>
+</ion-content>

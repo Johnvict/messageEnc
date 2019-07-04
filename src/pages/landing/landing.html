@@ -1,0 +1,53 @@
+<ion-header no-border>
+  
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <!-- *ngIf="!isSearchBarOpened" -->
+    <ion-title 
+    >{{ pages[selectedTab].title }}</ion-title>
+
+
+    <!-- <ion-searchbar
+      *ngIf="isSearchBarOpened"
+      showCancelButton="true"
+      (ionCancel)="isSearchBarOpened = false"
+      animated="true"
+      [(ngModel)]="searchQuery"
+      (keydown)=" searchContact($event)"
+      placeholder="search contact"
+    >
+    </ion-searchbar>
+    <ion-buttons end>
+      <span *ngIf="contactPageActive">
+        <button
+          ion-button
+          icon-only
+          *ngIf="!isSearchBarOpened"
+          (click)="isSearchBarOpened = true"
+        >
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </span>
+    </ion-buttons> -->
+
+
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="reloadMessages($event)">
+        <ion-refresher-content refreshingText="Reloading Messages..">
+        </ion-refresher-content>
+      </ion-refresher>
+
+      <super-tabs tabsPlacement="top" toolbarBackground="danger" 
+        toolbarColor="light" indicatorColor="light" (tabSelect)="onTabSelected($event)">
+        <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
+      </super-tabs> 
+
+</ion-content>
